@@ -107,6 +107,24 @@
 .btn:hover {
   transform: scale(1.05);
 }
+/* ボタンを必ずクリックできるようにする */
+.btn{
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* カードの装飾レイヤーがクリックを邪魔しないようにする */
+.card{
+  position: relative;
+  overflow: hidden;
+}
+
+/* もし.card::before や ::after を使ってるなら必須 */
+.card::before,
+.card::after{
+  pointer-events: none;
+}
   </style>
 </head>
 
@@ -123,7 +141,7 @@
       <div class="card">
         <h2>自己紹介サイト</h2>
         <p>HTMLとCSSで作成したポートフォリオサイトです。</p>
-        <a class="btn" href="index.html">サイトを見る</a>
+        <a class="btn" href="about.html">サイトを見る</a>
       </div>
 
       <div class="card">
