@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>制作物一覧</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121a2b;
+      --text:#e8eefc;
+      --muted:#a9b5d6;
+      --accent:#7aa2ff;
+      --border:rgba(255,255,255,.10);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(900px 400px at 10% 10%, rgba(122,162,255,.25), transparent 60%),
+        radial-gradient(700px 300px at 90% 20%, rgba(98,216,202,.18), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .container{
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 18px;
+    }
+
+    header{
+      padding: 26px 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      margin-bottom: 20px;
+    }
+
+    h1{
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .card{
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+
+    .card p{
+      margin:0 0 12px;
+      color:var(--muted);
+    }
+
+    .btn{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:8px;
+      background:var(--accent);
+      color:#000;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:bold;
+    }
+
+    footer{
+      margin-top: 20px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 720px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    .card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.btn {
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>制作物一覧</h1>
+      <p>これまでに作成したWebサイトです。</p>
+    </header>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>自己紹介サイト</h2>
+        <p>HTMLとCSSで作成したポートフォリオサイトです。</p>
+        <a class="btn" href="index.html">サイトを見る</a>
+      </div>
+
+      <div class="card">
+        <h2>架空のカフェサイト</h2>
+        <p>練習用に作成したカフェのホームページです。</p>
+        <a class="btn" href="cafe.html">サイトを見る</a>
+      </div>
+
+      <div class="card">
+        <h2>企業サイト（予定）</h2>
+        <p>今後追加予定の制作物です。</p>
+        <a class="btn" href="company.html">サイトを見る</a>
+      </div>
+
+    </div>
+
+    <footer>© 2026 Portfolio</footer>
+  </div>
+</body>
+</html>
